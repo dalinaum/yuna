@@ -1,0 +1,38 @@
+<style>
+.animbox {
+	background: red;
+	width: 100px;
+	height: 100px;
+	opacity: 1;
+}
+.animbox2 {
+	background: blue;
+	width: 100px;
+	height: 100px;
+	margin-left: 0px;
+	margin-top: 0px;
+	opacity: 0.1;
+}
+</style>
+<script src="jquery.js">
+</script>
+<div class="animbox">
+</div>
+<div class="animbox2">
+</div>
+<script>
+$('.animbox').click(function() {
+	$(this).animate({
+		opacity: 0,
+		width: 200,
+		height: 200
+	}, 2000);
+});
+$('.animbox2').click(function() {
+	$(this).animate({
+		marginTop: 50,
+		marginLeft: 50,
+		opacity: 1
+	}, 1000);
+});
+</script>
